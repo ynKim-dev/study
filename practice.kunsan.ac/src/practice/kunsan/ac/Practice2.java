@@ -6,7 +6,7 @@ public class Practice2 {
 		// TODO Auto-generated method stub
 		int temp = 0;
 		for(int i = 1; i <= 100; i++) temp = temp + i;
-		System.out.println("ÇÕ°è: " + temp);
+		System.out.println("í•©ê³„: " + temp);
 	}
 
 }

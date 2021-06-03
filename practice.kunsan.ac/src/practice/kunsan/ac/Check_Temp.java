@@ -9,10 +9,10 @@ public class Check_Temp {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		double temp = 0, temp1 = 0;
-		System.out.print("¼·¾¾: " );
+		System.out.print("ì„­ì”¨: " );
 		temp = scan.nextFloat();
 		temp1 = (temp * 1.8) + 32;
-		System.out.println("È­¾¾: " + temp1);
+		System.out.println("í™”ì”¨: " + temp1);
 		scan.close();
 	}
 
