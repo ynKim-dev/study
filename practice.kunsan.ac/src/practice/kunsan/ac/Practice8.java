@@ -1,9 +1,13 @@
 package practice.kunsan.ac;
 
+// 알파벳 대소문자를 서로 변경하는 프로젝트
 public class Practice8 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Change_Alphabat();
+	}
+
+	public static void Change_Alphabat() {
 		String text = "Hello World";
 		String answer = "";
 		int number = 0;
@@ -23,7 +27,6 @@ public class Practice8 {
 
 		}
 		System.out.println(text + "\n" + answer);
-
 	}
 
 }

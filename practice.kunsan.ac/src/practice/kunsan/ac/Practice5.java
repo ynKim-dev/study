@@ -2,10 +2,14 @@ package practice.kunsan.ac;
 
 import java.util.*;
 
+//학점 계산 프로젝트
 public class Practice5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Calculate_Grade();
+	}
+
+	public static void Calculate_Grade() {
 		Scanner scan = new Scanner(System.in);
 
 		int number = 0;

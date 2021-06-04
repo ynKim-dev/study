@@ -1,9 +1,14 @@
 package practice.kunsan.ac;
 
+// 국영수 합계와 평균 구하는 프로젝트
 public class Practice7 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Calc_Score();
+	}
+
+	public static void Calc_Score() {
 		int[][] arr = { { 90, 80, 80 }, { 85, 85, 95 }, { 95, 70, 75 }, { 80, 80, 90 }, { 90, 75, 80 } };
 		int sum = 0;
 

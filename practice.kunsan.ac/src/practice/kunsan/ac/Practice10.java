@@ -2,10 +2,11 @@ package practice.kunsan.ac;
 
 import java.util.*;
 
+// 사칙연산을 함수를 통해 계산하는 프로젝트
 public class Practice10 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner scan = new Scanner(System.in);
 		float number1 = 0, number2 = 0, count = 0;
 
@@ -35,7 +36,7 @@ public class Practice10 {
 				break;
 			count++;
 		}
-
+		scan.close();
 	}
 
 	public static float add(float x, float y) {

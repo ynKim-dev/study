@@ -1,9 +1,14 @@
 package practice.kunsan.ac;
 
+// 시저의 암호기법을 적용하는 프로젝트
 public class Practice9 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Change_To_Caesar_cipher();
+	}
+
+	public static void Change_To_Caesar_cipher() {
 		String text = "Hello World";
 		String answer = "";
 		int number = 0;
@@ -24,5 +29,4 @@ public class Practice9 {
 		}
 		System.out.println(text + "\n" + answer);
 	}
-
 }

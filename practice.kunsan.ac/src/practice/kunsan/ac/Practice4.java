@@ -2,10 +2,14 @@ package practice.kunsan.ac;
 
 import java.util.*;
 
+// 별표 출력 프로젝트
 public class Practice4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Create_Star_Triangle();
+	}
+
+	public static void Create_Star_Triangle() {
 		Scanner scan = new Scanner(System.in);
 
 		int temp = 0;
