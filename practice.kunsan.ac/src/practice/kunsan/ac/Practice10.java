@@ -29,6 +29,11 @@ public class Practice10 {
 				number1 = multiply(number1, number2);
 			} else if (count == 3) {
 				System.out.println(number1 + " / " + number2);
+
+				if (number2 == 0) {
+					System.out.println("0을 나누기 때문에 종료합니다!!");
+					break;
+				}
 				number1 = divide(number1, number2);
 			}
 
