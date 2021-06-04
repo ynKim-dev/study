@@ -6,10 +6,10 @@ import java.util.*;
 public class Practice5 {
 
 	public static void main(String[] args) {
-		Calculate_Grade();
+		calculate_Grade();
 	}
 
-	public static void Calculate_Grade() {
+	public static void calculate_Grade() {
 		Scanner scan = new Scanner(System.in);
 
 		int number = 0;

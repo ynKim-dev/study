@@ -7,10 +7,10 @@ public class Check_Temp {
 
 	public static void main(String[] args) {
 
-		Check_Temperature();
+		check_Temperature();
 	}
 
-	public static void Check_Temperature() {
+	public static void check_Temperature() {
 		Scanner scan = new Scanner(System.in);
 		double temp = 0, temp1 = 0;
 		System.out.print("섭씨: ");

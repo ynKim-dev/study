@@ -16,11 +16,11 @@ public class Practice6 {
 			arr[i] = scan.nextFloat();
 		}
 
-		System.out.println("합계: " + Get_Sum(arr) + "\n평균: " + Get_Sum(arr) / 10);
+		System.out.println("합계: " + get_Sum(arr) + "\n평균: " + get_Sum(arr) / 10);
 		scan.close();
 	}
 
-	public static float Get_Sum(float[] arr) {
+	public static float get_Sum(float[] arr) {
 		float sum = 0;
 		for (int i = 0; i < arr.length; i++) {
 			sum = sum + arr[i];

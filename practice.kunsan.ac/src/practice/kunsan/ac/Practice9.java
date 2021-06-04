@@ -5,10 +5,10 @@ public class Practice9 {
 
 	public static void main(String[] args) {
 
-		Change_To_Caesar_cipher();
+		change_To_Caesar_cipher();
 	}
 
-	public static void Change_To_Caesar_cipher() {
+	public static void change_To_Caesar_cipher() {
 		String text = "Hello World";
 		String answer = "";
 		int number = 0;
