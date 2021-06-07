@@ -28,13 +28,9 @@ public class Practice6 {
 					arr[count] = (float) number;
 				}
 			}
-			System.out.println(check_Text + " 변환  " + number);
 
 		}
 
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
 		System.out.println("합계: " + get_Sum(arr) + "\n평균: " + get_Sum(arr) / 10);
 
 	}
