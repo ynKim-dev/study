@@ -2,7 +2,8 @@ package practice.kunsan.ac;
 
 import java.util.*;
 
-public class Main {
+// 섭씨 온도를 화씨 온도로 변환하는 프로젝트
+public class Check_Temp {
 
 	public static void main(String[] args) {
 
