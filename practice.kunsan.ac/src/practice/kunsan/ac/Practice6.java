@@ -1,6 +1,5 @@
 package practice.kunsan.ac;
 
-import java.util.*;
 
 // 합계와 평균을 구하는 프로젝트
 public class Practice6 {
@@ -21,13 +20,14 @@ public class Practice6 {
 				count++;
 				count_Number = 0;
 				number = 0;
-			} else {
+			} else if ((int) check_Text >= 48 && (int) check_Text <= 58) {
 				number = number + ((int) check_Text - 48) * (int) Math.pow(10, count_Number);
 				count_Number++;
 				if (i == 0) {
 					arr[count] = (float) number;
 				}
-			}
+			} else
+				continue;
 
 		}
 
@@ -43,4 +43,5 @@ public class Practice6 {
 
 		return sum;
 	}
+
 }
