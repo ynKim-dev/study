@@ -9,10 +9,10 @@ public class Practice2 {
 	}
 
 	public static void sum_Number() {
-		int temp = 0;
+		int sum = 0;
 		for (int i = 1; i <= 100; i++)
-			temp = temp + i;
-		System.out.println("합계: " + temp);
+			sum = sum + i;
+		System.out.println("합계: " + sum);
 	}
 
 }
