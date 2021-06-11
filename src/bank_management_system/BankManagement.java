@@ -66,8 +66,8 @@ public class BankManagement {
 
 		System.out.println("저장된 계좌의 정보를 출력합니다!!");
 		for (BankAccount p : list) {
-			System.out.println("계좌 " + p.get_Account() + "( 예금주 : " + p.get_Name() + " )");
-			System.out.println("잔엑 : " + p.money_To_String());
+			System.out.println("계좌 " + p.getAccount() + "( 예금주 : " + p.getName() + " )");
+			System.out.println("잔엑 : " + p.moneyToString());
 		}
 	}
 
@@ -79,12 +79,12 @@ public class BankManagement {
 		name = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.get_Name().equals(name) == true) {
-				System.out.println("잔엑 : " + p.money_To_String());
+			if (p.getName().equals(name) == true) {
+				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("입금할 금액 입력 : ");
 				money = check_Number();
-				p.set_Money(p.get_Money() + money);
-				System.out.println(p.money_To_String(money) + " 입금합니다.");
+				p.setMoney(p.getMoney() + money);
+				System.out.println(p.moneyToString(money) + " 입금합니다.");
 			}
 		}
 
@@ -98,15 +98,15 @@ public class BankManagement {
 		name = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.get_Name().equals(name) == true) {
-				System.out.println("잔엑 : " + p.money_To_String());
+			if (p.getName().equals(name) == true) {
+				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("출금할 금액 입력 : ");
 				money = check_Number();
-				if (money > p.get_Money()) {
+				if (money > p.getMoney()) {
 					System.out.println("출금할 금액이 계좌의 금액 보다 더 많습니다!!");
 				} else {
-					p.set_Money(p.get_Money() - money);
-					System.out.println(p.money_To_String(money) + " 출금합니다.");
+					p.setMoney(p.getMoney() - money);
+					System.out.println(p.moneyToString(money) + " 출금합니다.");
 				}
 			}
 		}
@@ -119,9 +119,9 @@ public class BankManagement {
 		name = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.get_Name().equals(name) == true) {
-				System.out.println("계좌 " + p.get_Account() + "( 예금주 : " + p.get_Name() + " )");
-				System.out.println("잔엑 : " + p.money_To_String());
+			if (p.getName().equals(name) == true) {
+				System.out.println("계좌 " + p.getAccount() + "( 예금주 : " + p.getName() + " )");
+				System.out.println("잔엑 : " + p.moneyToString());
 			}
 		}
 	}
@@ -136,21 +136,21 @@ public class BankManagement {
 		sender = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.get_Name().equals(owner) == true) {
+			if (p.getName().equals(owner) == true) {
 				System.out.println("송금할 금액 입력 ");
 				money = check_Number();
-				System.out.println("잔엑 : " + p.money_To_String());
-				if (money > p.get_Money()) {
+				System.out.println("잔엑 : " + p.moneyToString());
+				if (money > p.getMoney()) {
 					System.out.println("송금할 금액이 계좌의 금액 보다 더 많습니다!!\n송금실패!!");
 					break;
 				} else {
-					p.set_Money(p.get_Money() - money);
-					System.out.println(p.money_To_String(money) + " 송금합니다.");
+					p.setMoney(p.getMoney() - money);
+					System.out.println(p.moneyToString(money) + " 송금합니다.");
 				}
 				for (BankAccount pl : list) {
-					if (pl.get_Account().equals(sender) == true) {
-						pl.set_Money(pl.get_Money() + money);
-						System.out.println(pl.money_To_String(money) + "이 입금되었습니다.");
+					if (pl.getAccount().equals(sender) == true) {
+						pl.setMoney(pl.getMoney() + money);
+						System.out.println(pl.moneyToString(money) + "이 입금되었습니다.");
 					}
 				}
 			}

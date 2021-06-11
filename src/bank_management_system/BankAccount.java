@@ -11,71 +11,71 @@ public class BankAccount {
 		this.money = 0;
 	}
 
-	public void set_Money(int money) {
+	public void setMoney(int money) {
 		this.money = money;
 	}
 
-	public String get_Name() {
+	public String getName() {
 		return name;
 	}
 
-	public String get_Account() {
+	public String getAccount() {
 		return account;
 	}
 
-	public int get_Money() {
+	public int getMoney() {
 		return money;
 	}
 
-	public String money_To_String() {
+	public String moneyToString() {
 		int count = 0;
-		char check_Text;
-		String text, return_Text = "", reverse = "";
+		char cText;
+		String text, rText = "", reverse = "";
 		text = this.money + "원";
 
 		// 계좌에 있는 잔액의 표기법을 변경하는 메소드
 		for (int i = (int) text.length() - 1; i >= 0; i--) {
-			check_Text = text.charAt(i);
-			if (check_Text == '0')
+			cText = text.charAt(i);
+			if (cText == '0')
 				count++;
 
-			return_Text = return_Text + check_Text;
+			rText = rText + cText;
 			if (count == 3) {
 				count = 0;
 				if ((i - 1) == 0)
 					continue;
-				return_Text = return_Text + ",";
+				rText = rText + ",";
 			}
 		}
 
-		for (int i = (int) return_Text.length() - 1; i >= 0; i--) {
-			check_Text = return_Text.charAt(i);
-			reverse = reverse + check_Text;
+		for (int i = (int) rText.length() - 1; i >= 0; i--) {
+			cText = rText.charAt(i);
+			reverse = reverse + cText;
 		}
 		return reverse;
 	}
 
-	public String money_To_String(int money) {
+	public String moneyToString(int money) {
 		int count = 0;
-		char check_Text;
-		String text, return_Text = "", reverse = "";
+		char cText;
+		String text, rText = "", reverse = "";
 		text = money + "원";
 
 		for (int i = (int) text.length() - 1; i >= 0; i--) {
-			check_Text = text.charAt(i);
-			if (check_Text == '0')
+			cText = text.charAt(i);
+			if (cText == '0')
 				count++;
 
-			return_Text = return_Text + check_Text;
+			rText = rText + cText;
 			if (count == 3) {
 				count = 0;
-				return_Text = return_Text + ",";
+				rText = rText + ",";
 			}
 		}
 
-		for (int i = (int) return_Text.length() - 1; i >= 0; i--) {
-			check_Text = return_Text.charAt(i);
-			reverse = reverse + check_Text;
+		for (int i = (int) rText.length() - 1; i >= 0; i--) {
+			cText = rText.charAt(i);
+			reverse = reverse + cText;
 		}
 		return reverse;
 	}
