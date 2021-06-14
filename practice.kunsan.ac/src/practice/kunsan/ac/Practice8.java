@@ -4,10 +4,10 @@ package practice.kunsan.ac;
 public class Practice8 {
 
 	public static void main(String[] args) {
-		change_Alphabat();
+		changeAlphabat();
 	}
 
-	public static void change_Alphabat() {
+	public static void changeAlphabat() {
 		String text = "Hello World";
 		String answer = "";
 		int number = 0;
