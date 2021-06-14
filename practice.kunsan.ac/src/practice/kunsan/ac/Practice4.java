@@ -6,10 +6,10 @@ import java.util.*;
 public class Practice4 {
 
 	public static void main(String[] args) {
-		create_Star_Triangle();
+		createStarTriangle();
 	}
 
-	public static void create_Star_Triangle() {
+	public static void createStarTriangle() {
 		Scanner scan = new Scanner(System.in);
 
 		int number = 0;
