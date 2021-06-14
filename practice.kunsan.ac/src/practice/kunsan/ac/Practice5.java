@@ -6,12 +6,12 @@ import java.util.*;
 public class Practice5 {
 
 	public static void main(String[] args) {
-		calculate_Grade();
+		calculateGrade();
 	}
 
-	public static void calculate_Grade() {
+	public static void calculateGrade() {
 
-		int number = check_Number();
+		int number = checkNumber();
 		String grade = "";
 
 		if (number >= 90)
@@ -30,14 +30,14 @@ public class Practice5 {
 	}
 
 	// 점수의 이상 값들을 감지해서 다시 입력받게 하는 함수
-	public static int check_Number() {
+	public static int checkNumber() {
 		Scanner scan = new Scanner(System.in);
-		int input_number = 0;
+		int number = 0;
 		while (true) {
 			try {
 				System.out.print("점수 입력: ");
-				input_number = scan.nextInt();
-				if (input_number >= 0 && input_number <= 100)
+				number = scan.nextInt();
+				if (number >= 0 && number <= 100)
 					break;
 				else
 					throw new Exception();
@@ -52,7 +52,7 @@ public class Practice5 {
 			}
 		}
 		scan.close();
-		return input_number;
+		return number;
 	}
 
 }
