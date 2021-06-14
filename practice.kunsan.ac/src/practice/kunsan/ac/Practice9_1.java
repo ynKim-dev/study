@@ -6,10 +6,10 @@ import java.util.*;
 public class Practice9_1 {
 
 	public static void main(String[] args) {
-		calc_Arr();
+		calcArr();
 	}
 
-	public static void calc_Arr() {
+	public static void calcArr() {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 
