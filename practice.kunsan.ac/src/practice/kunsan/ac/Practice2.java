@@ -5,10 +5,10 @@ public class Practice2 {
 
 	public static void main(String[] args) {
 
-		sum_Number();
+		sumNumber();
 	}
 
-	public static void sum_Number() {
+	public static void sumNumber() {
 		int sum = 0;
 		for (int i = 1; i <= 100; i++)
 			sum = sum + i;
