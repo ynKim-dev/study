@@ -76,7 +76,7 @@ public class Triangle {
 
 	public void createTriangle() {
 		checkSide();
-		drawTriangle();
 		System.out.println(toString());
+		drawTriangle();
 	}
 }
