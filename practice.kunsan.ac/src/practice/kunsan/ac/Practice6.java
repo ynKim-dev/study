@@ -8,21 +8,21 @@ public class Practice6 {
 
 		float[] arr = new float[10];
 		String text = "90,75,85,95,70,75,85,85,95,72";
-		char check_Text;
-		int count = 0, number = 0, count_Number = 0;
+		char cText;
+		int count = 0, number = 0, cNumber = 0;
 		System.out.println("점수: " + text);
 		for (int i = text.length() - 1; i >= 0; i--) {
 
-			check_Text = text.charAt(i);
+			cText = text.charAt(i);
 
-			if (check_Text == ',') {
+			if (cText == ',') {
 				arr[count] = (float) number;
 				count++;
-				count_Number = 0;
+				cNumber = 0;
 				number = 0;
-			} else if ((int) check_Text >= 48 && (int) check_Text <= 58) {
-				number = number + ((int) check_Text - 48) * (int) Math.pow(10, count_Number);
-				count_Number++;
+			} else if ((int) cText >= 48 && (int) cText <= 58) {
+				number = number + ((int) cText - 48) * (int) Math.pow(10, cNumber);
+				cNumber++;
 				if (i == 0) {
 					arr[count] = (float) number;
 				}
@@ -31,11 +31,11 @@ public class Practice6 {
 
 		}
 
-		System.out.println("합계: " + get_Sum(arr) + "\n평균: " + get_Sum(arr) / 10);
+		System.out.println("합계: " + getSum(arr) + "\n평균: " + getSum(arr) / 10);
 
 	}
 
-	public static float get_Sum(float[] arr) {
+	public static float getSum(float[] arr) {
 		float sum = 0;
 		for (int i = 0; i < arr.length; i++) {
 			sum = sum + arr[i];
