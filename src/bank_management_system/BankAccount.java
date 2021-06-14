@@ -2,12 +2,12 @@ package bank_management_system;
 
 // 계좌 클래스 
 public class BankAccount {
-	String name, account;
+	String name, accountID;
 	int money;
 
-	public BankAccount(String name, String account, int money) {
+	public BankAccount(String name, String accountID, int money) {
 		this.name = name;
-		this.account = account;
+		this.accountID = accountID;
 		this.money = 0;
 	}
 
@@ -19,8 +19,8 @@ public class BankAccount {
 		return name;
 	}
 
-	public String getAccount() {
-		return account;
+	public String getAccountID() {
+		return accountID;
 	}
 
 	public int getMoney() {

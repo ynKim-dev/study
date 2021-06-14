@@ -10,22 +10,22 @@ public class BankManagement {
 		int number = 0;
 
 		while (true) {
-			System.out.print("1.계좌 생성\n2.계좌 목록 보기\n3.입금\n4.출금\n5.계좌 잔액 확인\n6.송금 \n0.종료\n입력: ");
+			System.out.print(BankMessage.MSG_SELECT_MENU);
 			number = check_Number();
 
-			if (number == 1)
+			if (number == BankCommand.CMD_CREATE)
 				createAccount();
-			else if (number == 2)
+			else if (number == BankCommand.CMD_LOOKUP_LIST)
 				printList();
-			else if (number == 3)
+			else if (number == BankCommand.CMD_DEPOSIT)
 				depositMoney();
-			else if (number == 4)
+			else if (number == BankCommand.CMD_WITHDRAW)
 				withdrawMoney();
-			else if (number == 5)
+			else if (number == BankCommand.CMD_CHECK_BALANCE)
 				printMyAccount();
-			else if (number == 6)
+			else if (number == BankCommand.CMD_LEMIT)
 				remitMoney();
-			else if (number == 0)
+			else if (number == BankCommand.CMD_EXIT)
 				break;
 		}
 	}
@@ -52,13 +52,13 @@ public class BankManagement {
 	}
 
 	public void createAccount() {
-		String name, account;
+		String name, accountID;
 		Random rand = new Random();
 
 		System.out.print("생성할 계좌의 예금주: ");
 		name = scan.next();
-		account = (rand.nextInt(100) + 1) + "-" + (rand.nextInt(1000) + 1);
-		list.add(new BankAccount(name, account, 0));
+		accountID = (rand.nextInt(100) + 1) + "-" + (rand.nextInt(1000) + 1);
+		list.add(new BankAccount(name, accountID, 0));
 		System.out.println("계좌 생성이 완료되었습니다!!");
 	}
 
@@ -66,7 +66,7 @@ public class BankManagement {
 
 		System.out.println("저장된 계좌의 정보를 출력합니다!!");
 		for (BankAccount p : list) {
-			System.out.println("계좌 " + p.getAccount() + "( 예금주 : " + p.getName() + " )");
+			System.out.println("계좌 " + p.getAccountID() + "( 예금주 : " + p.getName() + " )");
 			System.out.println("잔엑 : " + p.moneyToString());
 		}
 	}
@@ -75,11 +75,11 @@ public class BankManagement {
 		String account;
 		int money = 0;
 
-		System.out.println("입금할 계좌의 예금주 입력 ");
+		System.out.println("입금할 계좌 번호 입력 ");
 		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getAccount().equals(account) == true) {
+			if (p.getAccountID().equals(account) == true) {
 				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("입금할 금액 입력 : ");
 				money = check_Number();
@@ -98,7 +98,7 @@ public class BankManagement {
 		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getAccount().equals(account) == true) {
+			if (p.getAccountID().equals(account) == true) {
 				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("출금할 금액 입력 : ");
 				money = check_Number();
@@ -119,8 +119,8 @@ public class BankManagement {
 		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getAccount().equals(account) == true) {
-				System.out.println("계좌 " + p.getAccount() + "( 예금주 : " + p.getName() + " )");
+			if (p.getAccountID().equals(account) == true) {
+				System.out.println("계좌 " + p.getAccountID() + "( 예금주 : " + p.getName() + " )");
 				System.out.println("잔엑 : " + p.moneyToString());
 			}
 		}
@@ -130,13 +130,13 @@ public class BankManagement {
 
 		int money = 0;
 		String owner, sender;
-		System.out.println("송금할 사람의 계좌 번호 입력 ");
+		System.out.println("자신의 계좌 번호 입력 ");
 		owner = scan.next();
-		System.out.println("돈을 보낼 사람의 계좌 번호 입력 ");
+		System.out.println("송금할 사람의 계좌 번호 입력 ");
 		sender = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getAccount().equals(owner) == true) {
+			if (p.getAccountID().equals(owner) == true) {
 				System.out.println("송금할 금액 입력 ");
 				money = check_Number();
 				System.out.println("잔엑 : " + p.moneyToString());
@@ -148,9 +148,8 @@ public class BankManagement {
 					System.out.println(p.moneyToString(money) + " 송금합니다.");
 				}
 				for (BankAccount pl : list) {
-					if (pl.getAccount().equals(sender) == true) {
+					if (pl.getAccountID().equals(sender) == true) {
 						pl.setMoney(pl.getMoney() + money);
-						System.out.println(pl.moneyToString(money) + "이 입금되었습니다.");
 					}
 				}
 			}
