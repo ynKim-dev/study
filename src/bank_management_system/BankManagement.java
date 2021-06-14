@@ -72,14 +72,14 @@ public class BankManagement {
 	}
 
 	public void depositMoney() {
-		String name;
+		String account;
 		int money = 0;
 
 		System.out.println("입금할 계좌의 예금주 입력 ");
-		name = scan.next();
+		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getName().equals(name) == true) {
+			if (p.getAccount().equals(account) == true) {
 				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("입금할 금액 입력 : ");
 				money = check_Number();
@@ -91,14 +91,14 @@ public class BankManagement {
 	}
 
 	public void withdrawMoney() {
-		String name;
+		String account;
 		int money = 0;
 
-		System.out.println("출금할 계좌의 예금주 입력  ");
-		name = scan.next();
+		System.out.println("출금할 계좌 번호 입력  ");
+		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getName().equals(name) == true) {
+			if (p.getAccount().equals(account) == true) {
 				System.out.println("잔엑 : " + p.moneyToString());
 				System.out.print("출금할 금액 입력 : ");
 				money = check_Number();
@@ -113,13 +113,13 @@ public class BankManagement {
 	}
 
 	public void printMyAccount() {
-		String name;
+		String account;
 
-		System.out.println("확인할 계좌의 예금주 입력  ");
-		name = scan.next();
+		System.out.println("확인할 계좌 번호 입력  ");
+		account = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getName().equals(name) == true) {
+			if (p.getAccount().equals(account) == true) {
 				System.out.println("계좌 " + p.getAccount() + "( 예금주 : " + p.getName() + " )");
 				System.out.println("잔엑 : " + p.moneyToString());
 			}
@@ -130,13 +130,13 @@ public class BankManagement {
 
 		int money = 0;
 		String owner, sender;
-		System.out.println("송금할 사람의 이름을 입력 ");
+		System.out.println("송금할 사람의 계좌 번호 입력 ");
 		owner = scan.next();
-		System.out.println("돈을 보낼 사람의 계좌를 입력 ");
+		System.out.println("돈을 보낼 사람의 계좌 번호 입력 ");
 		sender = scan.next();
 
 		for (BankAccount p : list) {
-			if (p.getName().equals(owner) == true) {
+			if (p.getAccount().equals(owner) == true) {
 				System.out.println("송금할 금액 입력 ");
 				money = check_Number();
 				System.out.println("잔엑 : " + p.moneyToString());
