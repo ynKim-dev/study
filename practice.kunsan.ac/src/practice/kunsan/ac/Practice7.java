@@ -5,10 +5,10 @@ public class Practice7 {
 
 	public static void main(String[] args) {
 
-		calcScore();
+		calculateScore();
 	}
 
-	public static void calcScore() {
+	public static void calculateScore() {
 		int[][] arr = { { 90, 80, 80 }, { 85, 85, 95 }, { 95, 70, 75 }, { 80, 80, 90 }, { 90, 75, 80 } };
 		int sum = 0;
 
