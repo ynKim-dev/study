@@ -7,5 +7,5 @@ public class BankCommand {
 	public static final int CMD_DEPOSIT = 3;
 	public static final int CMD_WITHDRAW = 4;
 	public static final int CMD_CHECK_BALANCE = 5;
-	public static final int CMD_LEMIT = 6;
+	public static final int CMD_REMIT = 6;
 }
