@@ -4,29 +4,31 @@ package practice.kunsan.ac;
 public class Practice8 {
 
 	public static void main(String[] args) {
-		changeAlphabat();
+		flipCase();
 	}
 
-	public static void changeAlphabat() {
-		String text = "Hello World";
+	public static void flipCase() {
+		Scanner scan = new Scanner(System.in);
+
+		char letter = 0;
 		String answer = "";
-		int number = 0;
-		char temp = 0;
+
+		System.out.println("문장을 입력하시오!");
+		String text = scan.nextLine();
 
 		for (int i = 0; i < text.length(); i++) {
-			temp = text.charAt(i);
+			letter = text.charAt(i);
 
-			number = (int) temp;
-
-			if (number >= 97 && number <= 122)
-				number = number - 32;
-			else if (number <= 90 && number >= 65)
-				number = number + 32;
-
-			answer = answer + (char) number;
+			if (Character.isUpperCase(letter) == true) {
+				answer = answer + Character.toLowerCase(letter);
+			} else {
+				answer = answer + Character.toUpperCase(letter);
+			}
 
 		}
-		System.out.println(text + "\n" + answer);
+
+		System.out.println("원본: " + text + "\n변경: " + answer);
+		scan.close();
 	}
 
 }
