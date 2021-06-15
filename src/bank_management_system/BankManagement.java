@@ -52,10 +52,10 @@ public class BankManagement {
 					throw new Exception();
 				break;
 			} catch (InputMismatchException e) {
-				System.out.println("정수 값을 입력하세요!!");
+				System.out.println(BankMessage.MSG_INPUT_INTEGER_FAIL);
 				scan.next();
 			} catch (Exception e) {
-				System.out.println("양수 값을 입력하세요!!");
+				System.out.println(BankMessage.MSG_INPUT_POSITIVE_NUMBER_FAIL);
 				continue;
 			}
 		}
@@ -67,11 +67,11 @@ public class BankManagement {
 		String name, accountID;
 		Random rand = new Random();
 
-		System.out.print("생성할 계좌의 예금주: ");
+		System.out.print(BankMessage.MSG_INPUT_NAME);
 		name = scan.next();
 		accountID = (rand.nextInt(100) + 1) + "-" + (rand.nextInt(1000) + 1);
 		BankAccounts.add(new BankAccount(name, accountID, 0));
-		System.out.println("계좌 생성이 완료되었습니다!!");
+		System.out.println(BankMessage.MSG_CREATE_SUCCESS);
 	}
 
 	public void printList() {
@@ -115,7 +115,7 @@ public class BankManagement {
 				System.out.print("출금할 금액 입력 : ");
 				money = checkNumber();
 				if (money > bankAccount.getMoney()) {
-					System.out.println("출금할 금액이 계좌의 금액 보다 더 많습니다!!");
+					System.out.println(BankMessage.MSG_WITHDRAW_FAIL);
 				} else {
 					bankAccount.setMoney(bankAccount.getMoney() - money);
 					System.out.println(bankAccount.moneyToString(money) + " 출금합니다.");
@@ -153,7 +153,7 @@ public class BankManagement {
 				money = checkNumber();
 				System.out.println("잔엑 : " + bankAccount.moneyToString());
 				if (money > bankAccount.getMoney()) {
-					System.out.println("송금할 금액이 계좌의 금액 보다 더 많습니다!!\n송금실패!!");
+					System.out.println(BankMessage.MSG_WITHDRAW_FAIL);
 					break;
 				} else {
 					bankAccount.setMoney(bankAccount.getMoney() - money);
