@@ -3,8 +3,8 @@ package bank_management_system;
 import java.util.*;
 
 public class BankManagement {
-	public Scanner scan = new Scanner(System.in);
-	ArrayList<BankAccount> BankAccounts = new ArrayList<BankAccount>();
+	private Scanner scan = new Scanner(System.in);
+	private ArrayList<BankAccount> BankAccounts = new ArrayList<BankAccount>();
 
 	public void printMenu() {
 		int cmd = 0;
